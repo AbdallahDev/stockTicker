@@ -1,6 +1,24 @@
+body {
+  width: 500px;
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 #container {
   display: flex;
   flex-direction: column;
+  padding: 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+#dateTime {
+  font-weight: bolder;
+  color: #555;
+  margin: 0 0 16px 4px;
+  font-size: 15px;
+  display: flex;
+  justify-content: left;
 }
 .stockQoute {
   margin-bottom: 20px;
@@ -9,14 +27,23 @@
   display: flex;
   justify-content: start;
   width: 250px;
+  align-items: center;
 }
 .logo {
-  width: 50px;
+  width: 46px;
   border-radius: 25px;
 }
 .nameAndSymbol {
-  margin-left: 10px;
+  margin-left: 6px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
+}
+.tickerSymbol {
+    background-color: #f1eeee;
+    width: fit-content;
+    padding: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 7px;
 }

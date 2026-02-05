@@ -1,0 +1,11 @@
+{
+    "manifest_version": 3,
+    "name": "Stock Tracker",
+    "version": "1.0",
+    "description": "View the current stock quotes for big companies",
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": "imgs/logo/stock.png"
+    },
+    "permissions": []
+}
