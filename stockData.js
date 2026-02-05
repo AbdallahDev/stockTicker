@@ -1,3 +1,23 @@
-const stocks = [];
-
-//todo: create objects withe these data: Ticker Symbol, Shares Traded, Price Traded	, Change Direction	, Change Amount, icon logo
+const stocks = [
+  {
+    logo: "imgs/logo/nvidia.png",
+    security_name: "NVIDIA Corporation",
+    ticker_symbol: "NVDA",
+    price: 180.34,
+    change_percent: -2.84,
+  },
+  {
+    logo: "imgs/logo/apple.png",
+    security_name: "Apple Inc.",
+    ticker_symbol: "AAPL",
+    price: 242.15,
+    change_percent: 1.12,
+  },
+  {
+    logo: "imgs/logo/vanguard.png",
+    security_name: "Vanguard S&P 500 ETF",
+    ticker_symbol: "VOO",
+    price: 542.1,
+    change_percent: 0.0,
+  },
+];
