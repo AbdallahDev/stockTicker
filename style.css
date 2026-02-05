@@ -1,0 +1,22 @@
+#container {
+  display: flex;
+  flex-direction: column;
+}
+.stockQoute {
+  margin-bottom: 20px;
+}
+.leftData {
+  display: flex;
+  justify-content: start;
+  width: 250px;
+}
+.logo {
+  width: 50px;
+  border-radius: 25px;
+}
+.nameAndSymbol {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
