@@ -3,7 +3,7 @@ import { stocks } from "./stockData.js";
 const containerEl = document.getElementById("container");
 
 renderApp();
-setInterval(renderApp, 5000);
+// setInterval(renderApp, 5000);
 
 function renderApp() {
   let dateTimeHtml = renderDateTime();
@@ -14,6 +14,7 @@ function renderApp() {
 
 function renderDateTime() {
   const now = new Date();
+  // console.log(now.toLocaleString())
 
   const options = {
     timeZone: "Asia/Amman", // Explicitly set to Jordan
@@ -34,6 +35,16 @@ function renderStockQuotes() {
   let containerDOM = "";
 
   stocks.forEach((stock) => {
+    let statusClass = "neutral";
+    let sign = "";
+
+    if (stock.change_percent > 0) {
+      statusClass = "up";
+      sign = "+";
+    } else if (stock.change_percent < 0) {
+      statusClass = "down";
+    }
+
     const stockDOM = `
     <div class="stockQoute">
         <div class="leftData">
@@ -46,6 +57,24 @@ function renderStockQuotes() {
                     ${stock.ticker_symbol}
                 </div>
             </div>
+        </div>
+        <div class="rightData">
+          <div class="priceAndCurrency">
+            <div class="price">
+              ${stock.price.toFixed(2)}
+            </div>
+            <div class="currency">
+              ${stock.currency}
+            </div>
+          </div>
+          <div class="changePercentAndChangePrice">
+            <div class="changePrice">
+              ${stock.change_price}
+            </div>
+            <div class="changePercent">
+              ${stock.change_percent}
+            </div>
+          </div>
         </div>
     </div>
     `;

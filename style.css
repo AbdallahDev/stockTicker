@@ -15,35 +15,77 @@ body {
 #dateTime {
   font-weight: bolder;
   color: #555;
-  margin: 0 0 16px 4px;
-  font-size: 15px;
+  margin: 0 0 16px 5px;
+  font-size: 18px;
   display: flex;
   justify-content: left;
+  font-style: italic;
 }
 .stockQoute {
-  margin-bottom: 20px;
+  display: flex;
+  width: 100%;
+  /* This is the secret: it forces children to stretch to the tallest one */
+  align-items: stretch;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
 }
 .leftData {
+  flex: 0 0 75%;
   display: flex;
-  justify-content: start;
-  width: 250px;
-  align-items: center;
+  align-items: center; /* Keeps logo and name centered vertically */
+  gap: 12px;
 }
 .logo {
-  width: 46px;
+  width: 52px;
   border-radius: 25px;
 }
 .nameAndSymbol {
-  margin-left: 6px;
+  /* margin-left: 6px; */
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  height: 52px;
+}
+.securityName {
+  font-size: 18px;
 }
 .tickerSymbol {
-    background-color: #f1eeee;
-    width: fit-content;
-    padding: 5px;
-    font-size: 13px;
-    font-weight: 600;
-    border-radius: 7px;
+  background-color: #f1eeee;
+  width: fit-content;
+  padding: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 7px;
+}
+.rightData {
+  flex: 0 0 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  text-align: right;
+}
+.priceAndCurrency {
+  display: flex;
+  align-items: self-end;
+  font-size: 20px;
+}
+.price {
+  /* font-size: 18px; */
+}
+.currency {
+  margin-left: 2px;
+  font-size: 12px;
+}
+.changePercentAndChangePrice {
+  display: flex;
+  display: flex;
+  align-items: self-end;
+  font-size: 17px;
+  /* margin-left: 14px; */
+}
+.changePercent {
+  margin-left: 7px;
+}
+.changePrice {
 }
